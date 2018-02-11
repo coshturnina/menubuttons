@@ -16,6 +16,9 @@ body{
 	background-color: $c-pagebg;
 	color: #fff;
 }
+article{
+	padding: 2em;
+}
 
 h1{
 	font-size: 3em;
@@ -31,20 +34,24 @@ h1{
 
 .lead + p{
 	@include one-line;
+	letter-spacing: 0.1em;
 }
 
 section{
-	padding: 4em;
+	padding: 2em 4em;
 }
 
 h2{
 	font-size: 1.25em;
 	font-family: 'Open Sans', Arial, sans-serif;
 	@include one-line;
+	padding-top: 0;
 }
 
 .pane{
 	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 
 	button{
 		margin: 1em;

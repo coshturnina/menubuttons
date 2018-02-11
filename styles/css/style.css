@@ -74,6 +74,9 @@ body {
   background-color: #333;
   color: #fff; }
 
+article {
+  padding: 2em; }
+
 h1 {
   font-size: 3em;
   width: 100%;
@@ -90,20 +93,24 @@ h1 {
 .lead + p {
   width: 100%;
   padding: 1em;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 0.1em; }
 
 section {
-  padding: 4em; }
+  padding: 2em 4em; }
 
 h2 {
   font-size: 1.25em;
   font-family: 'Open Sans', Arial, sans-serif;
   width: 100%;
   padding: 1em;
-  text-align: center; }
+  text-align: center;
+  padding-top: 0; }
 
 .pane {
-  display: flex; }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
   .pane button {
     margin: 1em; }
 
