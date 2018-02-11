@@ -24,8 +24,13 @@ h1{
 }
 .lead{
 	font-size: 1.5em;
+	font-family: 'Montserrat', Arial, sans-serif;
 	@include one-line;
 
+}
+
+.lead + p{
+	@include one-line;
 }
 
 section{
@@ -34,6 +39,7 @@ section{
 
 h2{
 	font-size: 1.25em;
+	font-family: 'Open Sans', Arial, sans-serif;
 	@include one-line;
 }
 
@@ -117,30 +123,30 @@ h2{
 		}
 	}
 
-	/*--------------- closingLines ------------ */
+	/*--------------- arrow-left  ------------ */
 
 
-	.lines-button.arrow.close{
+	.lines-button.arrow-left.close{
 		// transform: scale3d(.8,.8,.8);
 
 		.line{
-			width: $button-size/1.2;
+			transform: scaleX(0.8);
 			&::before, &::after{
 				top: 0;
-				width: $button-size/1.8;
+				
 
 			}
 			&::before{
-				transform: rotate(40deg);
+				transform: rotate(40deg) scaleX(0.6);
 			}
 
 			&::after{
-				transform: rotate(-40deg);
+				transform: rotate(-40deg) scaleX(0.6);
 			}
 		}
 	}
 
-	/*------------- arrow-left ----------*/
+	/*-------------  closingLines ----------*/
 	.lines-button.closingLines.close{
 		// transform: scale3d(.8,.8,.8);
 
@@ -150,4 +156,89 @@ h2{
 			}
 		}
 	}
+
+	/*--------------- arrow-right  ------------ */
+
+	.lines-button.arrow-right{
+		.line{
+			&::before, &::after{
+			transform-origin: $button-size - $button-size/14;
+			}
+		}
+	}
+
+	.lines-button.arrow-right.close{
+		// transform: scale3d(.8,.8,.8);
+
+		.line{
+			transform: scaleX(0.8);
+			&::before, &::after{
+				top: 0;
+				// width: $button-size/1.8;
+				// transform: scaleX(0.5);
+
+			}
+			&::before{
+				transform: rotate(-40deg) scaleX(0.6);
+			}
+
+			&::after{
+				transform: rotate(40deg) scaleX(0.6);
+			}
+		}
+	}
+
+	/*--------------- x-button  ------------ */
+
+	.lines-button.x-button.close{
+		.line{
+			background-color: transparent;
+
+			&::before, &::after{
+				transform-origin: 50%;
+				top: 0;			
+			}
+
+			&::before{
+				transform: rotate(45deg);
+			}
+
+			&::after{
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+/*--------------- x-button-round  ------------ */
+
+.lines-button.x-button-round{
+	.line{
+		transition: background $transition-time $transition-time*2 ease;
+ 
+    &:before, &:after{
+      
+      transform-origin: 50% 50%;
+      transition: top $transition-time $transition-time*2 ease, transform $transition-time ease;
+	}
+	}
+}
+	.lines-button.x-button-round.close{
+		.line{
+			transition: background $transition-time 0s ease;
+    background: transparent;
+ 
+    &:before, &:after{
+      transition: top $transition-time ease, transform $transition-time $transition-time*2 ease;      
+      top:0;
+      
+    }
+    &:before{
+      transform: rotate(45deg); 
+    }
+    &:after{
+      transform: rotate3d(0,0,1,-45deg); 
+    }
+		}
+	}
+
 } // navicons

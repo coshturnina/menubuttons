@@ -1,0 +1,31 @@
+.main-nav{
+	padding: 1em;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	ul{
+		display: flex;
+	justify-content: space-between;
+	}
+}
+
+#select-lang{
+	span{
+		$size: 3em;
+		display: inline-block;
+		width: $size;
+		height: $size/2;
+
+	}
+	li{
+		display: flex;
+	}
+
+	#select-lang-en{
+		background-image: url("assets/united-kingdom.svg");
+		background-repeat: no-repeat;
+	}
+
+	#select-lang-ru{
+		background-image: url("assets/russia.svg");
+		background-repeat: no-repeat;
+	}
+}

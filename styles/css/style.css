@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300");
 /* ----------- reset ---------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -46,6 +47,26 @@ table {
   box-sizing: border-box; }
 
 /* ----------- end of reset ---------- */
+.main-nav {
+  padding: 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  .main-nav ul {
+    display: flex;
+    justify-content: space-between; }
+
+#select-lang span {
+  display: inline-block;
+  width: 3em;
+  height: 1.5em; }
+#select-lang li {
+  display: flex; }
+#select-lang #select-lang-en {
+  background-image: url("assets/united-kingdom.svg");
+  background-repeat: no-repeat; }
+#select-lang #select-lang-ru {
+  background-image: url("assets/russia.svg");
+  background-repeat: no-repeat; }
+
 /* ------------ debug grphics -------- */
 /* ------------ page -------- */
 body {
@@ -61,6 +82,12 @@ h1 {
 
 .lead {
   font-size: 1.5em;
+  font-family: 'Montserrat', Arial, sans-serif;
+  width: 100%;
+  padding: 1em;
+  text-align: center; }
+
+.lead + p {
   width: 100%;
   padding: 1em;
   text-align: center; }
@@ -70,6 +97,7 @@ section {
 
 h2 {
   font-size: 1.25em;
+  font-family: 'Open Sans', Arial, sans-serif;
   width: 100%;
   padding: 1em;
   text-align: center; }
@@ -81,8 +109,11 @@ h2 {
 
 /* ------------- navicons ----------- */
 .navicons {
-  /*--------------- closingLines ------------ */
-  /*------------- arrow-left ----------*/ }
+  /*--------------- arrow-left  ------------ */
+  /*-------------  closingLines ----------*/
+  /*--------------- arrow-right  ------------ */
+  /*--------------- x-button  ------------ */
+  /*--------------- x-button-round  ------------ */ }
   .navicons .lines-button {
     padding: 1.75rem 0.875rem;
     transition: 0.2s;
@@ -126,16 +157,49 @@ h2 {
       top: 1rem; }
     .navicons .lines-button:hover .line::after {
       top: -1rem; }
-  .navicons .lines-button.arrow.close .line {
-    width: 2.91667rem; }
-    .navicons .lines-button.arrow.close .line::before, .navicons .lines-button.arrow.close .line::after {
-      top: 0;
-      width: 1.94444rem; }
-    .navicons .lines-button.arrow.close .line::before {
-      transform: rotate(40deg); }
-    .navicons .lines-button.arrow.close .line::after {
-      transform: rotate(-40deg); }
+  .navicons .lines-button.arrow-left.close .line {
+    transform: scaleX(0.8); }
+    .navicons .lines-button.arrow-left.close .line::before, .navicons .lines-button.arrow-left.close .line::after {
+      top: 0; }
+    .navicons .lines-button.arrow-left.close .line::before {
+      transform: rotate(40deg) scaleX(0.6); }
+    .navicons .lines-button.arrow-left.close .line::after {
+      transform: rotate(-40deg) scaleX(0.6); }
   .navicons .lines-button.closingLines.close .line::before, .navicons .lines-button.closingLines.close .line::after {
     top: 0; }
+  .navicons .lines-button.arrow-right .line::before, .navicons .lines-button.arrow-right .line::after {
+    transform-origin: 3.25rem; }
+  .navicons .lines-button.arrow-right.close .line {
+    transform: scaleX(0.8); }
+    .navicons .lines-button.arrow-right.close .line::before, .navicons .lines-button.arrow-right.close .line::after {
+      top: 0; }
+    .navicons .lines-button.arrow-right.close .line::before {
+      transform: rotate(-40deg) scaleX(0.6); }
+    .navicons .lines-button.arrow-right.close .line::after {
+      transform: rotate(40deg) scaleX(0.6); }
+  .navicons .lines-button.x-button.close .line {
+    background-color: transparent; }
+    .navicons .lines-button.x-button.close .line::before, .navicons .lines-button.x-button.close .line::after {
+      transform-origin: 50%;
+      top: 0; }
+    .navicons .lines-button.x-button.close .line::before {
+      transform: rotate(45deg); }
+    .navicons .lines-button.x-button.close .line::after {
+      transform: rotate(-45deg); }
+  .navicons .lines-button.x-button-round .line {
+    transition: background 0.2s 0.4s ease; }
+    .navicons .lines-button.x-button-round .line:before, .navicons .lines-button.x-button-round .line:after {
+      transform-origin: 50% 50%;
+      transition: top 0.2s 0.4s ease, transform 0.2s ease; }
+  .navicons .lines-button.x-button-round.close .line {
+    transition: background 0.2s 0s ease;
+    background: transparent; }
+    .navicons .lines-button.x-button-round.close .line:before, .navicons .lines-button.x-button-round.close .line:after {
+      transition: top 0.2s ease, transform 0.2s 0.4s ease;
+      top: 0; }
+    .navicons .lines-button.x-button-round.close .line:before {
+      transform: rotate(45deg); }
+    .navicons .lines-button.x-button-round.close .line:after {
+      transform: rotate3d(0, 0, 1, -45deg); }
 
 /*# sourceMappingURL=style.css.map */

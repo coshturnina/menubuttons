@@ -3,13 +3,28 @@
 <head>
 	<meta charset="utf-8">
 	<title>Menu Buttons</title>
+	<meta description="css menu buttons with transition and transform | меню с переходами и трансформациями">
 	<link rel="stylesheet" type="text/css" href="styles/css/style.css">
 </head>
 <body>
+	<nav class="main-nav">
+		<ul>
+			<li>Back to Articles</li>
+			<li id="select-lang">Language
+				<!-- <ul>
+					<li id="select-lang-en">en <span></span></li>
+					<li id="select-lang-ru">ru <span></span></li>
+				</ul> -->
+			</li>
+		</ul>
+	</nav>
 	<article>
 		<h1>Menu Buttons</h1>
 		<p class="lead">
-			Different menu buttons with transformations and animations
+			Different menu buttons with transitions, transformations and animations
+		</p>
+		<p>
+			Click the button to see the effect.
 		</p>
 		<section class="navicons">
 			<h2>Navicons</h2>
@@ -18,6 +33,18 @@
 					<span class="line"></span>
 				</button>
 				<button class="lines-button arrow arrow-left" type="button" role="button" aria-label="Toggle Navigation">
+					<span class="line"></span>
+				</button>
+
+				<button class="lines-button arrow arrow-right" type="button" role="button" aria-label="Toggle Navigation">
+					<span class="line"></span>
+				</button>
+
+				<button class="lines-button x-button" type="button" role="button" aria-label="Toggle Navigation">
+					<span class="line"></span>
+				</button>
+
+				<button class="lines-button x-button-round" type="button" role="button" aria-label="Toggle Navigation">
 					<span class="line"></span>
 				</button>
 			</div>
@@ -30,14 +57,18 @@
 			ev.stopPropagation();
 			ev.currentTarget.classList.toggle('close');
 		};
+		navicons.changeOnClick = function(className){
+			var elem = document.getElementsByClassName(className)[0];
+			elem.addEventListener('click', navicons.toggleClass, false);
+		};
 
-		navicons.closingLines = document.getElementsByClassName('closingLines')[0];
-		navicons.closingLines.addEventListener('click', navicons.toggleClass, false);
 		
-		navicons.arrowleft = document.getElementsByClassName('arrow-left')[0];
-		navicons.arrowleft.addEventListener('click', navicons.toggleClass, false);
-
-
+		navicons.changeOnClick('closingLines');
+		navicons.changeOnClick('arrow-left');
+		navicons.changeOnClick('arrow-right');
+		navicons.changeOnClick('x-button');
+		navicons.changeOnClick('x-button-round');
+		
 
 	</script>
 </body>
