@@ -1,0 +1,141 @@
+/* ----------- reset ---------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+/* ----------- end of reset ---------- */
+/* ------------ debug grphics -------- */
+/* ------------ page -------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: #fff; }
+
+h1 {
+  font-size: 3em;
+  width: 100%;
+  padding: 1em;
+  text-align: center; }
+
+.lead {
+  font-size: 1.5em;
+  width: 100%;
+  padding: 1em;
+  text-align: center; }
+
+section {
+  padding: 4em; }
+
+h2 {
+  font-size: 1.25em;
+  width: 100%;
+  padding: 1em;
+  text-align: center; }
+
+.pane {
+  display: flex; }
+  .pane button {
+    margin: 1em; }
+
+/* ------------- navicons ----------- */
+.navicons {
+  /*--------------- closingLines ------------ */
+  /*------------- arrow-left ----------*/ }
+  .navicons .lines-button {
+    padding: 1.75rem 0.875rem;
+    transition: 0.2s;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .navicons .lines-button:hover {
+      opacity: 1; }
+    .navicons .lines-button:active {
+      transition: 0;
+      background-color: rgba(0, 0, 0, 0.1); }
+  .navicons .line {
+    position: relative;
+    display: inline-block;
+    width: 3.5rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    transition: 0.2s; }
+    .navicons .line::before, .navicons .line::after {
+      display: inline-block;
+      width: 3.5rem;
+      height: 0.5rem;
+      background-color: #fff;
+      border-radius: 0.25rem;
+      transition: 0.2s;
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 0.25rem; }
+    .navicons .line::before {
+      top: 0.875rem; }
+    .navicons .line::after {
+      top: -0.875rem; }
+  .navicons .lines-button:hover {
+    opacity: 1; }
+    .navicons .lines-button:hover .line::before {
+      top: 1rem; }
+    .navicons .lines-button:hover .line::after {
+      top: -1rem; }
+  .navicons .lines-button.arrow.close .line {
+    width: 2.91667rem; }
+    .navicons .lines-button.arrow.close .line::before, .navicons .lines-button.arrow.close .line::after {
+      top: 0;
+      width: 1.94444rem; }
+    .navicons .lines-button.arrow.close .line::before {
+      transform: rotate(40deg); }
+    .navicons .lines-button.arrow.close .line::after {
+      transform: rotate(-40deg); }
+  .navicons .lines-button.closingLines.close .line::before, .navicons .lines-button.closingLines.close .line::after {
+    top: 0; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,153 @@
+/* ------------ debug grphics -------- */
+$b-deb: 1px solid green;
+
+/* ------------ page -------- */
+
+$c-pagebg: #333; 
+
+@mixin one-line{
+	width: 100%;
+	padding: 1em;
+	text-align: center;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	background-color: $c-pagebg;
+	color: #fff;
+}
+
+h1{
+	font-size: 3em;
+	@include one-line;
+	
+}
+.lead{
+	font-size: 1.5em;
+	@include one-line;
+
+}
+
+section{
+	padding: 4em;
+}
+
+h2{
+	font-size: 1.25em;
+	@include one-line;
+}
+
+.pane{
+	display: flex;
+
+	button{
+		margin: 1em;
+	}
+}
+
+/* ------------- navicons ----------- */
+
+.navicons{
+	$button-size: 3.5rem;
+	$transition-time: 0.2s;
+
+	.lines-button{
+
+		padding: $button-size/2 $button-size/4;
+		transition: $transition-time;
+		cursor: pointer;
+		user-select: none;
+		border-radius: $button-size/7;
+		background-color: transparent;
+
+		&:hover{
+			opacity: 1;
+		}
+		&:active{
+			transition: 0;
+			background-color: rgba(0,0,0,0.1);
+		}
+
+		border: none;
+		outline: none;
+	}
+
+
+	@mixin line{
+		display: inline-block;
+		width: $button-size;
+		height: $button-size/7;
+		background-color: #fff;
+		border-radius: $button-size/14;
+		transition: $transition-time;
+	}
+
+	.line{
+		position: relative;
+		@include line;
+
+		&::before, &::after{
+			@include line;
+
+			position: absolute;
+			left: 0;
+			content: '';
+
+			transform-origin: $button-size/14;
+		}
+		&::before{
+			top: $button-size/4;
+		}
+		&::after{
+			top: -$button-size/4;
+		}
+	}
+
+	.lines-button:hover{
+		opacity: 1;
+
+		.line{
+			&::before{
+				top: $button-size/3.5;
+			}
+
+			&::after{
+				top: -$button-size/3.5;
+			}
+		}
+	}
+
+	/*--------------- closingLines ------------ */
+
+
+	.lines-button.arrow.close{
+		// transform: scale3d(.8,.8,.8);
+
+		.line{
+			width: $button-size/1.2;
+			&::before, &::after{
+				top: 0;
+				width: $button-size/1.8;
+
+			}
+			&::before{
+				transform: rotate(40deg);
+			}
+
+			&::after{
+				transform: rotate(-40deg);
+			}
+		}
+	}
+
+	/*------------- arrow-left ----------*/
+	.lines-button.closingLines.close{
+		// transform: scale3d(.8,.8,.8);
+
+		.line{
+			&::before, &::after{
+				top: 0;
+			}
+		}
+	}
+} // navicons
