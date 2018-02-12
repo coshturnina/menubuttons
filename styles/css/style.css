@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Open+Sans+Condensed:300");
+@import url("https://fonts.googleapis.com/css?family=Cormorant|Poiret+One");
 /* ----------- reset ---------- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,33 +68,53 @@ table {
   background-image: url("assets/russia.svg");
   background-repeat: no-repeat; }
 
+.side-nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #eee; }
+  .side-nav span {
+    width: 3em;
+    height: 3em;
+    display: inline-block; }
+  .side-nav .github-button span {
+    background-image: url("assets/github.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.3s; }
+    .side-nav .github-button span:hover {
+      transform: scale(1.1); }
+
 /* ------------ debug grphics -------- */
 /* ------------ page -------- */
 body {
   font-family: Arial, sans-serif;
   background-color: #333;
-  color: #fff; }
+  color: #eee; }
 
 article {
   padding: 2em; }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   width: 100%;
-  padding: 1em;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.1em;
+  padding: 1em; }
 
 .lead {
   font-size: 1.5em;
-  font-family: 'Montserrat', Arial, sans-serif;
+  padding-bottom: 1em;
   width: 100%;
-  padding: 1em;
   text-align: center; }
 
 .lead + p {
   width: 100%;
-  padding: 1em;
   text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
   letter-spacing: 0.1em; }
 
 section {
@@ -103,7 +124,6 @@ h2 {
   font-size: 1.25em;
   font-family: 'Open Sans', Arial, sans-serif;
   width: 100%;
-  padding: 1em;
   text-align: center;
   padding-top: 0; }
 

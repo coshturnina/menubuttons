@@ -4,37 +4,44 @@ $b-deb: 1px solid green;
 /* ------------ page -------- */
 
 $c-pagebg: #333; 
+$c-pagetxt: #eee;
 
 @mixin one-line{
 	width: 100%;
-	padding: 1em;
+	
 	text-align: center;
 }
 
 body{
 	font-family: Arial, sans-serif;
 	background-color: $c-pagebg;
-	color: #fff;
+	color: $c-pagetxt;
 }
 article{
 	padding: 2em;
 }
 
 h1{
-	font-size: 3em;
+	font-size: 4em;
 	@include one-line;
+	font-family: 'Montserrat', Arial, sans-serif;
+	letter-spacing: 0.1em;
+	padding: 1em;
 	
 }
 .lead{
 	font-size: 1.5em;
-	font-family: 'Montserrat', Arial, sans-serif;
+	padding-bottom: 1em;
+
 	@include one-line;
 
 }
 
 .lead + p{
 	@include one-line;
+	font-family: 'Open Sans Condensed', sans-serif;
 	letter-spacing: 0.1em;
+	
 }
 
 section{
@@ -46,6 +53,7 @@ h2{
 	font-family: 'Open Sans', Arial, sans-serif;
 	@include one-line;
 	padding-top: 0;
+
 }
 
 .pane{

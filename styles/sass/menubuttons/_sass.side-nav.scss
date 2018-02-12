@@ -1,0 +1,30 @@
+.side-nav{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 1em;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #eee;
+
+	span{
+		$size: 3em;
+		width: $size;
+		height: $size;
+		display: inline-block;
+
+	}
+	.github-button{
+		span{
+
+		background-image: url("assets/github.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		transition: 0.3s;
+
+		&:hover{
+			transform: scale(1.1);
+		}
+
+		}
+	}
+}
